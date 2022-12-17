@@ -7,64 +7,88 @@
      <style>
          body{
              background-image: url('form.jpg');
-             color:khaki;
+             color:rgb(0, 0, 0);
          }
          input{
-             background-color:wheat;
+             background-color:rgb(255, 166, 0);
          }
          table,tr,td{
              text-align: center;
-             border: 1px solid black;
+             border: 1px solid rgb(237, 0, 0);
              /*border-collapse: collapse;*/
-             margin: 50px;
+             margin: 0 50px;
              padding: 10px;
              border-radius: 10px;
          }
          #display{
              background-color:white;
+             border: none;
+             font-size: 20px;
+             margin: 5px;
+         }
+         .text-center{
+            text-align: center;
+         }
+         .form_calc{
+            display: flex;
+            justify-content: center;
+         }
+         input{
+            outline: none;
+            border: none;
+            font-size: 20px;
+            background-color: #fff;
+            margin: 5px;
+         }
+         .red{
+            color: red;
          }
      </style>
  </head>
  <body>
-     <h3>calculator</h3>
-      <form name="calculator">
-          <table>
+     <h1 class="text-center">calculator</h1>
+     <div class="form_calc">
+
+         <form name="calculator" >
+             <table>
               <tr>
                   <td colspan="4">
                       <input type="text" name="display" id="display" disabled>
-                  </td>
-              </tr>
-              <tr>
-                <td><input type="button" name="one" value="1" onclick="calculator.display.value +='1'"></td>
-                  <td><input type="button" name="two" value="2" onclick="calculator.display.value +='2'"></td>
-                  <td><input type="button" name="three" value="3" onclick="calculator.display.value +='3'"></td>
-                  <td><input type="button" name="plussign"  class="operator" value="+" onclick="calculator.display.value +='+'"></td>
-              </tr>
-              <tr>
-                <td><input type="button" name="four" value="4" onclick="calculator.display.value +='4'"></td>
-                  <td><input type="button" name="five" value="5" onclick="calculator.display.value +='5'"></td>
-                  <td><input type="button" name="six" value="6" onclick="calculator.display.value +='6'"></td>
-                  <td><input type="button" name="minussign"  class="operator" value="-" onclick="calculator.display.value +='-'"></td>
-              </tr>
-              <tr>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="one" value="1" onclick="calculator.display.value +='1'"></td>
+                    <td><input type="button" name="two" value="2" onclick="calculator.display.value +='2'"></td>
+                    <td><input type="button" name="three" value="3" onclick="calculator.display.value +='3'"></td>
+                    <td><input type="button" name="plussign"  class="operator" value="+" onclick="calculator.display.value +='+'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="four" value="4" onclick="calculator.display.value +='4'"></td>
+                    <td><input type="button" name="five" value="5" onclick="calculator.display.value +='5'"></td>
+                    <td><input type="button" name="six" value="6" onclick="calculator.display.value +='6'"></td>
+                    <td><input type="button" name="minussign"  class="operator" value="-" onclick="calculator.display.value +='-'"></td>
+                </tr>
+                <tr>
                 <td><input type="button" name="seven" value="7" onclick="calculator.display.value +='7'"></td>
                   <td><input type="button" name="eight" value="8" onclick="calculator.display.value +='8'"></td>
                   <td><input type="button" name="nine" value="9" onclick="calculator.display.value +='9'"></td>
                   <td><input type="button" name="multiplysign"  class="operator" value="*" onclick="calculator.display.value +='*'"></td>
               </tr>
               <tr>
-                <td><input type="button" name="doublezero" value="00" onclick="calculator.display.value +='00'"></td>
+                  <td><input type="button" name="doublezero" value="00" onclick="calculator.display.value +='00'"></td>
                   <td><input type="button" name="devide" value="/" onclick="calculator.display.value +='/'"></td>
                   <td><input type="button" ></td>
                   <td><input type="button" ></td>
               </tr>
               <tr>
-                <td><input type="button" name="clear" value="c" onclick="calculator.display.value =''"></td>
+                  <td><input type="button" name="clear" value="c" onclick="calculator.display.value =''"></td>
                   <td><input type="button" name="zero" value="0" onclick="calculator.display.value +='0'"></td>
                   <td><input type="button" name="dot" value="." onclick="calculator.display.value +='.'"></td>
                   <td><input type="button" name="doit"  class="operator" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
-              </tr>
-          </table>
-      </form>
- </body>
- </html>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <h3 class="text-center red">Made with ❤️ By Tarun</h3>
+    </body>
+    </html>
